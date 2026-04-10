@@ -1,15 +1,13 @@
-<h1 align="center">HR Attrition Analysis: Why Employees Leave?</h1>
+<h1 align="center">HR Attrition Analysis</h1>
 
 <p align="center">
   <b>SQL + Python Project | IBM HR Analytics Dataset</b><br>
-  <sub>Analyzed 1,470 employee records using SQL queries and Python visualizations to identify key drivers of attrition.</sub>
+  <sub>This project looks at employee data to understand why people leave and what factors matter most.</sub>
 </p>
 
 <p align="center">
   <img src="https://img.shields.io/badge/MySQL-8.0-blue?logo=mysql&logoColor=white" />
   <img src="https://img.shields.io/badge/Python-3.x-green?logo=python&logoColor=white" />
-  <img src="https://img.shields.io/badge/Status-Completed-brightgreen" />
-  <img src="https://img.shields.io/badge/Type-SQL%20%2B%20Python-orange" />
 </p>
 
 ---
