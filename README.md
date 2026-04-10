@@ -13,9 +13,9 @@
 ---
  
 ## Problem Statement
-I built this project to figure out one thing — **why are employees leaving the company?**
+The goal of this project is to understand — **why are employees leaving the company?**
 
-Not just "who left", but what's common among people who left. Is it salary? Overtime? Their age? Their role? Or a mix of everything?
+Instead of only looking at "who left", but what's common among people who left. Is it salary? Overtime? Their age? Their role? Or a mix of everything?
 
 I used **SQL to ask the questions** and **Python to visualize the answers**.
 
