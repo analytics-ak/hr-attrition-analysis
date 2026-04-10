@@ -1,5 +1,20 @@
-# HR Attrition Analysis: What Drives Employees to Leave?
+<h1 align="center">HR Attrition Analysis: What Drives Employees to Leave?</h1>
 
+<p align="center">
+  <b>SQL + Python Project | IBM HR Analytics Dataset</b><br>
+  <sub>Analyzed 1,470 employee records using SQL queries and Python visualizations to identify key drivers of attrition.</sub>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/MySQL-8.0-blue?logo=mysql&logoColor=white" />
+  <img src="https://img.shields.io/badge/Python-3.x-green?logo=python&logoColor=white" />
+  <img src="https://img.shields.io/badge/Status-Completed-brightgreen" />
+  <img src="https://img.shields.io/badge/Type-SQL%20%2B%20Python-orange" />
+</p>
+
+---
+ 
+## Problem Statement
 I built this project to figure out one thing — **why are employees leaving the company?**
 
 Not just "who left", but what's common among people who left. Is it salary? Overtime? Their age? Their role? Or a mix of everything?
@@ -144,17 +159,15 @@ In every department, employees who left were earning less than those who stayed.
 
 ### Top 5 roles losing the most people (by count)
 
-Lab Technicians and Sales Executives lose the most employees in absolute numbers — partly because these are larger teams.
+Lab Technicians and Sales Executives lose the most employees in absolute numbers, partly because these are larger teams.
 
 ![Top 5 Attrition](images/Top_5_Attrition.png)
 
 ---
 
-### When you combine multiple factors, the risk gets extreme
+### When we combine multiple factors, the risk gets extreme
 
-Sales Representatives working overtime have a **66.7% attrition rate**. Two out of three leave.
-
-Lab Technicians and HR employees with overtime also show very high risk.
+Sales Representatives working overtime have a **66.7% attrition rate**. Two out of three leave. Lab Technicians and HR employees with overtime also show a very high risk.
 
 ![Risk Profile](images/Comprehensive_Risk_Profile_Large.png)
 
@@ -177,7 +190,7 @@ I used an **independent-samples t-test** to compare the income of employees who 
 - **T-statistic: -6.20**
 - **P-value: < 0.05**
 
-What this means in plain English — the income difference between leavers and stayers is **real**. It's not random noise in the data. Employees who left were genuinely earning less, and the numbers back that up.
+What this means — the income difference between leavers and stayers is **real**. It's not random noise or luck in the data. Employees who left were genuinely earning less, and the numbers back that up.
 
 ---
 
@@ -231,7 +244,7 @@ I want to be honest about the limits:
 hr-attrition-analysis/
 │
 ├── hr_attrition.ipynb          ← Full analysis notebook (SQL + Python + Charts)
-├── hr_attrition_analysis.csv   ← The dataset
+├── data_setup.sql              ← The initial data setup in MySQL
 ├── README.md                   ← You're reading this
 │
 └── images/                     ← All chart images
@@ -272,7 +285,18 @@ numpy
 
 ---
 
-## About Me
+## Author
+ 
+**Ashish Kumar Dongre**
+Data Analyst | Python, SQL, Pandas, Seaborn, Matplotlib
+ 
+🔗 **LinkedIn:** [View My Profile](https://www.linkedin.com/in/analytics-ashish/)
+
+📂 **Dataset:** [IBM HR Analytics Employee Attrition & Performance on Kaggle](https://www.kaggle.com/datasets/pavansubhasht/ibm-hr-analytics-attrition-dataset)
+
+💻 **GitHub:** [analytics-ak](https://github.com/analytics-ak)
+
+📘 **SQL/Python Files:** `data_setup.sql` · `hr_attrition.ipynb`
 
 
 ---
