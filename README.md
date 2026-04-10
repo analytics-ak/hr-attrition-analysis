@@ -1,4 +1,4 @@
-<h1 align="center">HR Attrition Analysis: What Drives Employees to Leave?</h1>
+<h1 align="center">HR Attrition Analysis: Why Employees Leave?</h1>
 
 <p align="center">
   <b>SQL + Python Project | IBM HR Analytics Dataset</b><br>
