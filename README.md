@@ -13,11 +13,22 @@
 ---
  
 ## Problem Statement
-The goal of this project is to understand — **why are employees leaving the company?**
+The goal of this project is to understand **why employees leave the company.**
 
-Instead of only looking at "who left", but what's common among people who left. Is it salary? Overtime? Their age? Their role? Or a mix of everything?
+Instead of only identifying who left, this analysis focuses on patterns across employees who left. Key factors include salary, overtime, age, role, and their combined impact.
 
-I used **SQL to ask the questions** and **Python to visualize the answers**.
+**SQL** was used to explore the data, and **Python** was used to visualize the results.
+
+---
+
+## Key Findings
+
+- Overtime increases attrition by nearly 3x
+- Employees who leave earn significantly less
+- Sales roles show the highest attrition
+- Younger employees leave the most
+- Early-tenure employees are more likely to leave
+- Attrition is driven by multiple factors, not a single cause
 
 ---
 
@@ -30,7 +41,6 @@ Before I started writing any code, I had a few questions in mind:
 - **Which roles and departments hurt the most?** Is this a company-wide thing or specific to certain teams?
 - **What about age, experience, and satisfaction?** Do younger or newer employees leave more? Does being unhappy at work actually show up in the numbers?
 
-The entire analysis is built around answering these questions with data, not guesses.
 
 ---
 
@@ -59,7 +69,7 @@ The entire analysis is built around answering these questions with data, not gue
 
 ## How I Approached This
 
-I didn't just throw the data into charts. I followed a step-by-step process:
+The analysis follows a structured approach:
 
 1. **Checked the data first** — looked for missing values, duplicates, and weird numbers
 2. **Asked business questions using SQL** — attrition by department, role, salary, overtime, age, etc.
@@ -71,8 +81,6 @@ I didn't just throw the data into charts. I followed a step-by-step process:
 ---
 
 ## What I Found
-
-Here's the short version. The details are in the notebook.
 
 **Overall:** 237 out of 1,470 employees left. That's a **16.12% attrition rate**.
 
@@ -181,14 +189,14 @@ Most features show weak correlation with attrition individually. This confirms t
 
 ## Statistical Validation
 
-I didn't want to just say "people who left earn less" and leave it at that. That could easily be a coincidence. So I ran a proper statistical test.
+Rather than relying only on the observed income difference, I ran a statistical test to confirm that the result is not due to chance.
 
 I used an **independent-samples t-test** to compare the income of employees who left vs those who stayed.
 
 - **T-statistic: -6.20**
 - **P-value: < 0.05**
 
-What this means — the income difference between leavers and stayers is **real**. It's not random noise or luck in the data. Employees who left were genuinely earning less, and the numbers back that up.
+This means the income difference between employees who left and those who stayed is **real**. It's not random noise or luck in the data. Employees who left were genuinely earning less, and the numbers back that up.
 
 ---
 
@@ -204,13 +212,13 @@ I scored each employee group based on attrition rate, sample size, and statistic
 
 Attrition doesn't happen because of one thing. No single column in the data explains it all.
 
-It's a combination of:
+When we combine multiple factors:
 - **Workload** — overtime pushes people out
 - **Salary** — lower pay is linked with higher attrition across every department
-- **Role** — some roles like Sales Rep and Lab Technician are hit much harder
+- **Role** — some roles, like Sales Rep and Lab Technician, are hit much harder
 - **Early tenure** — most people who leave do it in their first few years
 
-But if I had to pick the one factor that matters most — **overtime is the strongest driver of attrition in this dataset.** Nothing else comes close to the 3x difference it creates.
+Among all factors, **overtime is the strongest driver of attrition in this dataset.** Nothing else comes close to the 3x difference it creates.
 
 ---
 
@@ -228,7 +236,7 @@ If I had to present this to an HR team, here's what I'd say:
 
 ## What This Project Does NOT Do
 
-I want to be honest about the limits:
+Limitations:
 
 - This is **not a prediction model**. I didn't build any ML. I identified patterns and risk factors.
 - **Correlation is not causation.** For example, single employees leaving more might be because they're younger, not because they're single.
@@ -241,11 +249,11 @@ I want to be honest about the limits:
 ```
 hr-attrition-analysis/
 │
-├── hr_attrition.ipynb          ← Full analysis notebook (SQL + Python + Charts)
-├── data_setup.sql              ← The initial data setup in MySQL
-├── README.md                   ← You're reading this
-│
-└── images/                     ← All chart images
+├── notebooks/
+│   └── hr_attrition_analysis.ipynb          ← Full analysis notebook (SQL + Python + Charts)
+├── data_setup.sql                           ← The initial data setup in MySQL
+├── README.md                                ← You're reading this
+└── images/                                  ← All chart images
     ├── Department_Attrition_Final.png
     ├── JobRole_Attrition_Final.png
     ├── Monthly_Income_Attrition.png
@@ -268,7 +276,7 @@ hr-attrition-analysis/
 1. Clone this repo
 2. Make sure you have Python, MySQL, and Jupyter Notebook installed
 3. Import the CSV into MySQL (table name: `hr_attrition`, database: `hr`)
-4. Open `hr_attrition.ipynb` and update the MySQL connection credentials in the notebook
+4. Open `notebooks/hr_attrition_analysis.ipynb` and update the MySQL connection credentials in the notebook
 5. Run all cells
 
 **Python libraries needed:**
@@ -294,7 +302,7 @@ Data Analyst | Python, SQL, Pandas, Seaborn, Matplotlib
 
 💻 **GitHub:** [analytics-ak](https://github.com/analytics-ak)
 
-📘 **SQL/Python Files:** `data_setup.sql` · `hr_attrition.ipynb`
+📘 **SQL/Python Files:** `data_setup.sql` · `hr_attrition_analysis.ipynb`
 
 
 ---
