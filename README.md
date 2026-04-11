@@ -11,6 +11,14 @@
 </p>
 
 ---
+## Project Demo
+
+Here are some key insights from the analysis:
+
+![Overtime Impact](images/Overtime_Attrition.png)
+![Risk Profile](images/TopRiskPriorityBars_Premium.png)
+
+---
  
 ## Problem Statement
 The goal of this project is to understand **why employees leave the company.**
@@ -234,6 +242,13 @@ If I had to present this to an HR team, here's what I'd say:
 
 ---
 
+## Where This Analysis Helps
+
+- HR teams to reduce employee turnover
+- Managers to identify high-risk employees
+- Business leaders to improve retention strategy
+  
+---
 ## What This Project Does NOT Do
 
 Limitations:
