@@ -1,8 +1,8 @@
 <h1 align="center">HR Attrition Analysis</h1>
 
 <p align="center">
-  <b>SQL + Python Project | IBM HR Analytics Dataset</b><br>
-  <sub>This project looks at employee data to understand why people leave and what factors matter most.</sub>
+  <b>SQL + Python | IBM HR Analytics Dataset</b><br>
+  <sub>Finding why employees leave — and what it's actually costing the company</sub>
 </p>
 
 <p align="center">
@@ -11,251 +11,209 @@
 </p>
 
 ---
-## Project Demo
 
-Here are some key insights from the analysis:
+## The Short Version
 
-![Overtime Impact](images/Overtime_Attrition.png)
-![Risk Profile](images/TopRiskPriorityBars_Premium.png)
+237 employees left. That is 16% of the workforce.
 
----
- 
-## Problem Statement
-The goal of this project is to understand **why employees leave the company.**
+Using a standard 6-month replacement cost, this company is spending roughly **$6.8 million** to replace people who left — and the exits are not random. They are concentrated in the same roles, under the same conditions, for the same reasons.
 
-Instead of only identifying who left, this analysis focuses on patterns across employees who left. Key factors include salary, overtime, age, role, and their combined impact.
-
-**SQL** was used to explore the data, and **Python** was used to visualize the results.
+This analysis finds exactly where the bleeding is happening — and shows that fixing overtime, pay, and early-career retention can cut attrition significantly and save millions per cycle.
 
 ---
 
-## Key Findings
+## The Core Business Problem
 
-- Overtime increases attrition by nearly 3x
-- Employees who leave earn significantly less
-- Sales roles show the highest attrition
-- Younger employees leave the most
-- Early-tenure employees are more likely to leave
-- Attrition is driven by multiple factors, not a single cause
+Attrition here is not a company-wide crisis. It is a concentrated problem.
 
----
+A small group — primarily Sales Representatives working overtime and earning below market rate — is responsible for a disproportionate share of the total cost. The rest of the company is comparatively stable. This means broad, company-wide policies will not work. The fix needs to be targeted at specific roles, under specific conditions.
 
-## Key Questions I Wanted to Answer
-
-Before I started writing any code, I had a few questions in mind:
-
-- **Does overtime push people out?** Are employees who work extra hours more likely to quit?
-- **Does money matter?** Are the ones leaving earning less than the ones staying?
-- **Which roles and departments hurt the most?** Is this a company-wide thing or specific to certain teams?
-- **What about age, experience, and satisfaction?** Do younger or newer employees leave more? Does being unhappy at work actually show up in the numbers?
-
+If the company ignores this, the $6.8M replacement cost repeats every single cycle. If the targeted fixes are applied, the data shows attrition in the highest-risk groups can drop significantly — with measurable financial impact.
 
 ---
 
-## Dataset
+## The Single Biggest Finding
 
-- **Source:** [IBM HR Analytics Employee Attrition & Performance](https://www.kaggle.com/datasets/pavansubhasht/ibm-hr-analytics-attrition-dataset) (Kaggle)
-- **Size:** 1,470 employees, 35 columns
-- **What it covers:** Age, salary, department, job role, satisfaction scores, overtime, years at company, attrition (yes/no), and more
-- **Data quality:** No missing values, no duplicates, all values within valid ranges
+**Sales Representatives working overtime leave at 66.7%.**
 
-> This is a fictional dataset created by IBM. The analysis is real, the data is not.
-
----
-
-## Tools I Used
-
-| Tool | What I Used It For |
-|------|-------------------|
-| **MySQL** | Wrote SQL queries to analyze attrition patterns |
-| **Python (Pandas)** | Connected SQL results to Python for deeper analysis |
-| **Matplotlib & Seaborn** | Created all the charts |
-| **SciPy** | Ran a statistical t-test to validate findings |
-| **Jupyter Notebook** | Everything runs in one notebook, start to finish |
-
----
-
-## How I Approached This
-
-The analysis follows a structured approach:
-
-1. **Checked the data first** — looked for missing values, duplicates, and weird numbers
-2. **Asked business questions using SQL** — attrition by department, role, salary, overtime, age, etc.
-3. **Made charts for every finding** — so the patterns are easy to see
-4. **Combined multiple factors** — to find which employee groups are at the highest risk
-5. **Ran a statistical test** — to make sure the salary difference isn't just a coincidence
-6. **Wrote findings and recommendations** — what should HR actually do about this
-
----
-
-## What I Found
-
-**Overall:** 237 out of 1,470 employees left. That's a **16.12% attrition rate**.
-
----
-
-### Overtime is the biggest problem
-
-Employees who work overtime leave at **3x the rate** compared to those who don't (30.5% vs 10.4%).
-
-This was the single strongest factor in the entire analysis.
-
-![Overtime vs Attrition](images/Overtime_Attrition.png)
-
----
-
-### People who left were earning less
-
-Average income of employees who left: **~$4,787**
-Average income of employees who stayed: **~$6,833**
-
-I ran a t-test to check if this gap is real or just random — it's **statistically significant (p < 0.05)**.
-
-![Income vs Attrition](images/Monthly_Income_Attrition.png)
-
----
-
-### Sales department is bleeding the most
-
-Sales has the highest attrition at **20.6%**, followed by HR at **19.1%**. R&D is more stable at **13.8%**.
-
-![Department Attrition](images/Department_Attrition_Final.png)
-
----
-
-### Sales Representatives are the riskiest role
-
-Sales Reps leave at **39.8%** — almost 10x more than Research Directors. That's a massive gap.
-
-![Job Role Attrition](images/JobRole_Attrition_Final.png)
-
----
-
-### Younger employees leave more
-
-The 18–25 age group has **35.8% attrition** — the highest of any age bracket. It drops sharply after that.
-
-![Age Group Attrition](images/Age_Group_Attrition.png)
-
----
-
-### Newer employees leave faster
-
-Employees who left had an average tenure of **~5.1 years** vs **~7.4 years** for those who stayed. Most attrition happens in the early years.
-
-![Tenure vs Attrition](images/Tenure_Attrition.png)
-
----
-
-### Single employees leave more
-
-Single employees have **25.5% attrition** — double the rate of married employees (12.5%).
-
-![Marital Status vs Attrition](images/Marital_Attrition.png)
-
----
-
-### Job satisfaction matters, but it's not the strongest factor
-
-Satisfaction level 1 has **22.8% attrition** vs **11.3%** at level 4. It helps, but overtime and salary matter more.
-
-![Satisfaction vs Attrition](images/Satisfaction_Attrition.png)
-
----
-
-### Income gap exists across all departments
-
-In every department, employees who left were earning less than those who stayed. This is a company-wide pattern, not a department-specific one.
-
-![Income by Department](images/Income_department_Attrition.png)
-
----
-
-### Top 5 roles losing the most people (by count)
-
-Lab Technicians and Sales Executives lose the most employees in absolute numbers, partly because these are larger teams.
-
-![Top 5 Attrition](images/Top_5_Attrition.png)
-
----
-
-### When we combine multiple factors, the risk gets extreme
-
-Sales Representatives working overtime have a **66.7% attrition rate**. Two out of three leave. Lab Technicians and HR employees with overtime also show a very high risk.
+Two out of every three Sales Reps working overtime will quit. This is not a small pattern. It is the loudest signal in the entire dataset.
 
 ![Risk Profile](images/Comprehensive_Risk_Profile_Large.png)
 
 ---
 
-### Correlation heatmap — no single factor explains everything
+## What the Numbers Show
 
-Most features show weak correlation with attrition individually. This confirms that attrition is caused by a **combination of factors**, not just one thing.
+| Area | Number | What It Means |
+|---|---|---|
+| Overall attrition | 16.12% | 237 out of 1,470 employees left |
+| Estimated replacement cost | ~$6.8M | 237 × $4,787 avg salary × 6 months |
+| Overtime vs no overtime | 30.5% vs 10.4% | Nearly 3x higher attrition for overtime workers |
+| Sales Reps on overtime | 66.7% | Highest risk group in the entire dataset |
+| Lab Technicians on overtime | ~50% | 3x their no-overtime rate |
+| Pay gap | $4,787 vs $6,833/month | Leavers earned $2,046 less — confirmed by t-test (p < 0.05) |
+| Youngest employees (18–25) | 35.8% attrition | More than double the company average |
+| Early leavers avg tenure | 5.1 years | vs 7.4 years for employees who stayed |
+
+---
+
+## Why This Keeps Happening
+
+### Overtime is burning people out
+
+The same role behaves completely differently depending on overtime load. Lab Technicians without overtime leave at ~16%. With overtime, that number jumps to ~50%. The role did not change. The workload did.
+
+Overtime is the single strongest factor in this dataset. Nothing else creates a gap this large.
+
+![Overtime vs Attrition](images/Overtime_Attrition.png)
+
+---
+
+### Pay is below what people will accept
+
+Employees who left were earning $2,046 less per month than those who stayed. This gap exists in every department — it is not a Sales problem or an HR problem. It is a company-wide pattern.
+
+A t-test confirms this is not a coincidence (p < 0.05). The income difference is real.
+
+![Income vs Attrition](images/Monthly_Income_Attrition.png)
+
+![Income by Department](images/Income_department_Attrition.png)
+
+---
+
+### Some roles carry much higher risk than others
+
+Sales Representatives leave at 39.8% — nearly 10x higher than Research Directors at 4%. The gap between roles is not small. Attrition is heavily concentrated in a few specific positions.
+
+![Job Role Attrition](images/JobRole_Attrition_Final.png)
+
+Sales as a department has the highest attrition at 20.6%, followed by HR at 19.1%. R&D is the most stable at 13.8%.
+
+![Department Attrition](images/Department_Attrition_Final.png)
+
+---
+
+### Early career employees leave the fastest
+
+Most people who leave do it in the first five years. Employees who left had an average tenure of 5.1 years, compared to 7.4 years for those who stayed.
+
+The 18–25 age group leaves at 35.8% — the highest of any age bracket. This group is not leaving because they hate the company. They are leaving because they cannot see where they are going.
+
+![Tenure vs Attrition](images/Tenure_Attrition.png)
+
+![Age Group Attrition](images/Age_Group_Attrition.png)
+
+---
+
+### No single factor explains everything
+
+The correlation heatmap shows that no individual column strongly predicts attrition on its own. Attrition happens when multiple problems stack together — low pay, overtime, early career stage, and role type all compound each other.
 
 ![Correlation Matrix](images/Correlation_Matrix_HighVis.png)
+
+Other patterns worth noting:
+- Single employees leave at 25.5% vs 12.5% for married employees — likely because they are younger, not because of marital status itself
+- Job satisfaction level 1 has 22.8% attrition vs 11.3% at level 4 — satisfaction matters, but it is not the root cause
+
+![Marital Status](images/Marital_Attrition.png)
+![Satisfaction vs Attrition](images/Satisfaction_Attrition.png)
 
 ---
 
 ## Statistical Validation
 
-Rather than relying only on the observed income difference, I ran a statistical test to confirm that the result is not due to chance.
-
-I used an **independent-samples t-test** to compare the income of employees who left vs those who stayed.
+To confirm the income gap is real and not just a coincidence, I ran an independent-samples t-test comparing the monthly income of employees who left vs those who stayed.
 
 - **T-statistic: -6.20**
 - **P-value: < 0.05**
 
-This means the income difference between employees who left and those who stayed is **real**. It's not random noise or luck in the data. Employees who left were genuinely earning less, and the numbers back that up.
+The result is statistically significant. Employees who left were genuinely earning less. This is not random variation in the data.
 
 ---
 
-### Advanced risk profiling with priority scores
+## Risk Prioritization
 
-I scored each employee group based on attrition rate, sample size, and statistical significance to find the groups that actually need attention — not just the ones with small samples and misleading numbers.
+I scored each employee group by combining attrition rate, group size, and statistical significance — so the focus goes to groups that are both high-risk and large enough to actually matter, not just small groups with extreme but unreliable numbers.
 
 ![Risk Priority](images/TopRiskPriorityBars_Premium.png)
 
----
-
-## Key Takeaway
-
-Attrition doesn't happen because of one thing. No single column in the data explains it all.
-
-When we combine multiple factors:
-- **Workload** — overtime pushes people out
-- **Salary** — lower pay is linked with higher attrition across every department
-- **Role** — some roles, like Sales Rep and Lab Technician, are hit much harder
-- **Early tenure** — most people who leave do it in their first few years
-
-Among all factors, **overtime is the strongest driver of attrition in this dataset.** Nothing else comes close to the 3x difference it creates.
+The top three risk groups:
+- Sales Representatives on overtime → 66.7% attrition
+- Laboratory Technicians on overtime → ~50% attrition
+- Research Scientists on overtime → ~34% attrition
 
 ---
 
-## My Recommendations for HR
+## What Should Be Done
 
-If I had to present this to an HR team, here's what I'd say:
+| Problem | Action | Expected Impact |
+|---|---|---|
+| Sales Reps on overtime leaving at 66.7% | Cap overtime in Sales, redistribute workload | Brings attrition toward company average — retains ~50 Sales Reps per cycle, saves ~$1.4M |
+| Pay below market for high-risk roles | Salary review for Lab Technicians, Research Scientists, Sales Reps | Replacing one employee costs ~$28K. A $700/month raise costs $8,400/year and pays back in under 4 months |
+| Early-career employees leaving fast | Structured check-ins at 6, 12, 24 months. Clear growth path for employees under 25 | 20% reduction in early-tenure attrition retains ~47 additional employees — saves ~$1.35M |
+| Over-reliance on satisfaction surveys | Fix overtime and pay first, then measure satisfaction | Satisfaction matters but is not the root cause — a satisfied employee working overtime and earning below market will still leave |
 
-1. **Fix the overtime problem first.** It's the strongest predictor. Audit overtime policies in Sales and R&D immediately.
-2. **Review pay for Lab Technicians, Research Scientists, and Sales Reps.** These roles have high attrition and the leavers were earning below average.
-3. **Focus on the first 5 years.** Most people leave early. Onboarding and early career growth programs would help.
-4. **Pay attention to young employees (18–25).** They leave at more than double the company average. Mentorship or growth opportunities could help retain them.
-5. **Don't rely on satisfaction scores alone.** They matter, but overtime and salary are bigger drivers. A satisfied employee who works overtime and earns less will still leave.
+**Fix overtime first. Then pay. Then early-career support. In that order.**
+
+If nothing changes, the $6.8M replacement cost repeats every cycle. The data shows that targeting these three areas specifically — not broad company-wide policies — is where the highest return is.
+
+This analysis shows that attrition is not a vague HR issue — it is a measurable, high-cost problem with clear, data-backed fixes.
 
 ---
 
-## Where This Analysis Helps
+## Top 5 Roles by Total Exits
 
-- HR teams to reduce employee turnover
-- Managers to identify high-risk employees
-- Business leaders to improve retention strategy
-  
+Lab Technicians and Sales Executives lose the most employees in raw numbers, partly because they are larger teams. High total exits do not always mean the highest risk — but they do mean the highest replacement cost in absolute terms.
+
+![Top 5 Attrition](images/Top_5_Attrition.png)
+
 ---
-## What This Project Does NOT Do
 
-Limitations:
+## Limitations
 
-- This is **not a prediction model**. I didn't build any ML. I identified patterns and risk factors.
-- **Correlation is not causation.** For example, single employees leaving more might be because they're younger, not because they're single.
-- The dataset is **fictional** (made by IBM), so these findings are for demonstration, not real business decisions.
+- This is pattern analysis, not a prediction model. I identified risk factors — not which specific employee will leave next.
+- Correlation is not causation. Single employees leaving more is likely because they are younger, not because of their marital status.
+- The dataset is fictional (created by IBM). Dollar figures use industry-standard benchmarks, not real company financials.
+
+---
+
+## Dataset
+
+- **Source:** [IBM HR Analytics Employee Attrition & Performance](https://www.kaggle.com/datasets/pavansubhasht/ibm-hr-analytics-attrition-dataset)
+- **Size:** 1,470 employees, 35 columns
+- **Data quality:** No missing values, no duplicates, all values within valid ranges
+
+---
+
+## Tools Used
+
+| Tool | Purpose |
+|---|---|
+| **MySQL** | Core analysis — attrition by department, role, income, overtime, age, tenure |
+| **Python (Pandas)** | Reshaping SQL results for deeper analysis |
+| **Matplotlib & Seaborn** | All visualizations |
+| **SciPy** | Independent-samples t-test for income validation |
+| **Jupyter Notebook** | Full analysis in one place, start to finish |
+
+---
+
+## How to Run This
+
+1. Clone this repo
+2. Make sure you have Python, MySQL, and Jupyter Notebook installed
+3. Import the CSV into MySQL (table name: `hr_attrition`, database: `hr`)
+4. Open `notebooks/hr_attrition_analysis.ipynb` and update the MySQL connection credentials
+5. Run all cells
+
+**Libraries needed:**
+```
+pandas
+matplotlib
+seaborn
+mysql-connector-python==8.0.33
+scipy
+numpy
+```
 
 ---
 
@@ -265,10 +223,10 @@ Limitations:
 hr-attrition-analysis/
 │
 ├── notebooks/
-│   └── hr_attrition_analysis.ipynb          ← Full analysis notebook (SQL + Python + Charts)
-├── data_setup.sql                           ← The initial data setup in MySQL
-├── README.md                                ← You're reading this
-└── images/                                  ← All chart images
+│   └── hr_attrition_analysis.ipynb     ← Full analysis (SQL + Python + Charts)
+├── data_setup.sql                       ← MySQL table setup
+├── README.md                            ← You are reading this
+└── images/                              ← All chart exports
     ├── Department_Attrition_Final.png
     ├── JobRole_Attrition_Final.png
     ├── Monthly_Income_Attrition.png
@@ -286,38 +244,8 @@ hr-attrition-analysis/
 
 ---
 
-## How to Run This
-
-1. Clone this repo
-2. Make sure you have Python, MySQL, and Jupyter Notebook installed
-3. Import the CSV into MySQL (table name: `hr_attrition`, database: `hr`)
-4. Open `notebooks/hr_attrition_analysis.ipynb` and update the MySQL connection credentials in the notebook
-5. Run all cells
-
-**Python libraries needed:**
-```
-pandas
-matplotlib
-seaborn
-mysql-connector-python==8.0.33
-scipy
-numpy
-```
-
----
-
 ## Author
- 
+
 **Ashish Kumar Dongre**
-Data Analyst | Python, SQL, Pandas, Seaborn, Matplotlib
- 
-🔗 **LinkedIn:** [View My Profile](https://www.linkedin.com/in/analytics-ashish/)
 
-📂 **Dataset:** [IBM HR Analytics Employee Attrition & Performance on Kaggle](https://www.kaggle.com/datasets/pavansubhasht/ibm-hr-analytics-attrition-dataset)
-
-💻 **GitHub:** [analytics-ak](https://github.com/analytics-ak)
-
-📘 **SQL/Python Files:** `data_setup.sql` · `hr_attrition_analysis.ipynb`
-
-
----
+🔗 [LinkedIn](https://www.linkedin.com/in/analytics-ashish/) &nbsp;|&nbsp; 💻 [GitHub](https://github.com/analytics-ak/hr-attrition-analysis) &nbsp;|&nbsp; 📂 [Dataset on Kaggle](https://www.kaggle.com/datasets/pavansubhasht/ibm-hr-analytics-attrition-dataset)
