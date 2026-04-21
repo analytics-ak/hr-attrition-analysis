@@ -153,11 +153,103 @@ The top three risk groups:
 | Early-career employees leaving fast | Structured check-ins at 6, 12, 24 months. Clear growth path for employees under 25 | 20% reduction in early-tenure attrition retains ~47 additional employees — saves ~$1.35M |
 | Over-reliance on satisfaction surveys | Fix overtime and pay first, then measure satisfaction | Satisfaction matters but is not the root cause — a satisfied employee working overtime and earning below market will still leave |
 
-**Fix overtime first. Then pay. Then early-career support. In that order.**
+**Fix overtime first. Then pay. Then, early-career support. In that order.**
 
 If nothing changes, the $6.8M replacement cost repeats every cycle. The data shows that targeting these three areas specifically — not broad company-wide policies — is where the highest return is.
 
 This analysis shows that attrition is not a vague HR issue — it is a measurable, high-cost problem with clear, data-backed fixes.
+
+---
+
+## Impact if Implemented
+
+If the company fixes the main problems — overtime, low pay, and early employee exits — the impact is clear and directly tied to money.
+
+---
+
+### 1. Fixing Overtime (Biggest Impact, Least Cost)
+
+Right now, Sales Representatives who work overtime are leaving at **66.7%**. That means 2 out of 3 people quit.
+
+If overtime is reduced and their attrition comes closer to the company average (~16%):
+
+- Around 90 Sales Reps are in this group  
+- Right now, about 60 of them leave  
+- After fixing overtime, this can drop to around 15  
+- So, **~45 employees can be retained**
+
+Each employee costs about **$28,700** to replace.
+
+- **Total savings: ~45 × $28,700 = ~$1.29M per cycle**
+
+This is the easiest win because it doesn’t need extra salary spend — just better workload handling.
+
+---
+
+### 2. Fixing Salary (Quick Return)
+
+Employees who left were earning **$2,046 less per month** compared to those who stayed.
+
+If the company increases salary for high-risk roles by even **$700/month**:
+
+- Yearly cost per employee: $8,400  
+- Replacement cost per employee: ~$28,700  
+
+So the company recovers this cost in **less than 4 months**.
+
+If this prevents even **30 people from leaving**:
+
+- **Savings: ~30 × $28,700 = ~$861K**
+
+Even after a salary increase, the company still comes out ahead.
+
+---
+
+### 3. Keeping Early Employees (High Volume Impact)
+
+Employees aged 18–25 are leaving at **35.8%**, which is more than double the company average.
+
+If better onboarding and career guidance reduce this by just **20%**:
+
+- Around **45–50 employees can be retained**
+- **Savings: ~47 × $28,700 = ~$1.35M**
+
+This works because small improvements across a large group add up fast.
+
+---
+
+### Total Impact (Conservative View)
+
+If all three actions are taken:
+
+- Overtime fix: ~$1.29M  
+- Salary fix: ~$0.86M  
+- Early retention: ~$1.35M  
+
+**Total savings: ~ $3.5M per cycle**
+
+---
+
+### If Nothing Changes
+
+The company is already losing about **$6.8M per cycle**.
+
+If this continues:
+
+- In 3 years → **$20M+ loss**
+- Constant hiring pressure  
+- Loss of trained employees  
+- Lower team performance  
+
+This problem doesn’t go away on its own — it keeps repeating.
+
+---
+
+### What to Fix First
+
+1. **Fix overtime** → fastest and biggest impact  
+2. **Fix salary for risky roles** → quick return  
+3. **Improve early employee experience** → long-term stability  
 
 ---
 
