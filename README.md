@@ -11,8 +11,6 @@
 </p>
 
 ---
-![HR Attrition Dashboard](images/Comprehensive_Risk_Profile_Large.png)
----
 
 ## The Short Version
 
